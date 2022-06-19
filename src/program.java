@@ -1,5 +1,3 @@
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,23 +35,6 @@ public class program {
         return s.nextInt();
     }
 
-    static double pow(double a, double b){
-        if (a == 0 || a == 1) return a;
-        if (b == 0) return 1;
-        if (b < 0) {
-            a = 1 / a;
-            b = -b;
-        }
-        double res = a;
-        for (int i = 0; i < b - 1; i++) {
-            res *= a;
-        }
-        return res;
-
-
-    }
-
-
     //Даны два файла, в каждом из которых находится запись многочлена.
     // Сформировать файл содержащий сумму многочленов.
 
@@ -83,31 +64,6 @@ public class program {
 //        System.out.println();
 
 
-//        +Реализовать функцию возведения числа а в степень b. a, b ∈ Z. Сводя количество выполняемых действий к минимуму.
-//        Пример 1: а = 3, b = 2, ответ: 9
-//        Пример 2: а = 2, b = -2, ответ: 0.25
-//        Пример 3: а = 3, b = 0, ответ: 1
-//        Пример 4: а = 0, b = 0, ответ: не определено
-//        Пример 5
-//        входные данные находятся в файле input.txt в виде
-//        b 3
-//        a 10
-//        Результат нужно сохранить в файле output.txt
-//        1000
-          FileReader fr = new FileReader("input.txt");
-          int c;
-          String s = "";
-          String[] arr;
-          ArrayList ls = new ArrayList();
-          while ((c = fr.read()) != -1){
-//              System.out.println(c);
-              s += (char) c;
-          }
-          arr = s.split(" ");
-        System.out.println(Arrays.toString(arr));
-//        System.out.println(s);
 
-
-          System.out.println(pow(0, 0));
     }
 }
